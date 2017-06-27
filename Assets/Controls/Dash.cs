@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dah : MonoBehaviour {
+public class Dash : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		//Test
 	}
 	
 	// Update is called once per frame
