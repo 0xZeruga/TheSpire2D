@@ -9,11 +9,11 @@ public class Character : MonoBehaviour
 {
 
     private Attack m_ChosenAttack;
-    private Movement m_PlayerMovement;
+    //private Movement m_PlayerMovement;
+    public TimeManager m_Time;
     private Projectile m_Proj;
     private Spin m_Spin;
-    public TimeManager m_Time;
-
+    public Enemy m_Enemy;
 
     //Main Attributes
     public int Strength;
@@ -42,7 +42,8 @@ public class Character : MonoBehaviour
     //Activates movement script
     public void Start()
     {
-        m_ChosenAttack = new Spin();
+        //m_ChosenAttack = new Spin();
+        NewEnemy();
         //m_PlayerMovement = new Movement();
 
         CharacterClassDescription = "Poop";
@@ -63,6 +64,19 @@ public class Character : MonoBehaviour
         CheckDeath();
         SwapAttack(m_Proj, m_Spin);
         CalcAtts();
+    }
+    public void NewEnemy()
+    {
+
+        GameObject Enemy = new GameObject("Enemy"); // Make a new GO.
+        Rigidbody eRB = Enemy.AddComponent<Rigidbody>(); // Add the rigidbody.
+        eRB.mass = 5; // Set the GO's mass to 5 via the Rigidbody.
+
+
+        eRB = Instantiate(eRB,
+                                                                   this.transform.position,
+                                                                   this.transform.rotation)
+                        as Rigidbody;
     }
 
     //Swap between Range and Melee Attack with middle mouse button.

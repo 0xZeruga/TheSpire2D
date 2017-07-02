@@ -5,22 +5,32 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
    // private Character Char;
-    private float Speed;
-    
+    public float Speed;
+    public Vector2 pPos;    
+
 	// Use this for initialization
 	void Start () {
 
-        Speed = 10;    
-        //test
+        Speed = 10;
+        pPos = transform.position;
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-        RotateChar();
-        CheckKeyInput();
-        Move();
+    public Vector2 NewPos()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
+        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        transform.position = (movement * Speed);
+       
+        return pPos;
+    }
+    // Update is called once per frame
+    void FixedUpdate () {
+        //CheckKeyInput();
+        //RotateChar();
+        //Move();
+        NewPos();
     }
     private void RotateChar()
     {
@@ -38,6 +48,11 @@ public class Movement : MonoBehaviour {
     }
     private void CheckKeyInput()
     {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+
         //Check KeyBoards Presses
         foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
         {
@@ -49,7 +64,8 @@ public class Movement : MonoBehaviour {
                 }
                 if (vKey == KeyCode.A)
                 {
-
+                    movement = new Vector2(0f, -2f);
+                    transform.position = (movement * Speed);
                 }
                 if (vKey == KeyCode.S)
                 {
@@ -70,11 +86,15 @@ public class Movement : MonoBehaviour {
     }
     public void Move()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        var move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        transform.position = move * Speed * Time.deltaTime;
 
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        transform.position = (movement * Speed);
+        //float moveHorizontal = Input.GetAxis("Horizontal");
+        //float moveVertical = Input.GetAxis("Vertical");
 
+        //Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        //transform.position = (movement * Speed);
     }
+
+   
 }
