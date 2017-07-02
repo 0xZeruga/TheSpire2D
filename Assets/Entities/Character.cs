@@ -26,14 +26,33 @@ public class Character : MonoBehaviour
     //Derived Attributes
     public int MeleeDMG;
     public int CarryCapacity;
-    public int Health;
+    private float m_Health;
     public float HealthRegen;
-    public int Stamina;
+    private float m_Stamina;
     private float StaminaRegen;
-    public int Mana;
+    private float m_Mana;
     private float ManaRegen;
     public int MagicDMG;
 
+    public float Health
+    {
+        get { return m_Health; }
+        set { m_Health = value; }
+    }
+    public float Stamina
+    {
+        get { return m_Stamina; }
+        set { m_Stamina = value; }
+    }
+    public float Mana
+    {
+        get { return m_Mana; }
+        set { m_Mana = value; }
+    }
+
+    private const float MAXHEALTH = 100;
+    private const float MAXSTAMINA = 75;
+    private const float MAXMANA = 50;
 
     public string CharacterClassDescription = "";
 
@@ -55,7 +74,18 @@ public class Character : MonoBehaviour
         Toughness = 5;
         Luck = 5;
 
-        
+        m_Health = 100;
+        m_Stamina = 75;
+        m_Mana = 50;
+        Health -= 1f;
+        Stamina += 2f;
+
+
+        Debug.Log("Health" + Health + " / " + MAXHEALTH);
+
+        Debug.Log("Stamina" + Stamina + " / " + MAXSTAMINA);
+
+        Debug.Log("Mana" + Mana + " / " + MAXMANA);
 
 
     }
@@ -64,6 +94,8 @@ public class Character : MonoBehaviour
         CheckDeath();
         SwapAttack(m_Proj, m_Spin);
         CalcAtts();
+       
+       
     }
     public void NewEnemy()
     {
