@@ -395,7 +395,7 @@ MonoBehaviour:
   ProjectileRB: {fileID: 54142834703261666, guid: a3919e0f17012204498f3378a1fc6d7b,
     type: 2}
   speed: 2
-  targetTime: 0
+  targetTime: 1
 --- !u!114 &552686235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25f7863542164743a32b2377645d61e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 1
 --- !u!114 &552686236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +462,49 @@ Transform:
   - {fileID: 1860350131}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &891489537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 891489539}
+  - component: {fileID: 891489538}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &891489538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 891489537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cc7b17fb5015841a76b9e3108f9299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  C: {fileID: 0}
+  Money: 0
+  SoulFragments: 100
+--- !u!4 &891489539
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 891489537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18, y: 21.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1229693596
 Prefab:

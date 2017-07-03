@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Projectile : Attack {
 
+    public float Damage = 1;
 
 	// Use this for initialization
 	void Start () {
 		
-
+        
 
 	}
 	
@@ -16,4 +17,10 @@ public class Projectile : Attack {
 	void Update () {
 		
 	}
+
+    void DoProjectileHit()
+    {
+        gameObject.GetComponent<Enemy>().TakeDmg(Damage);
+        Destroy(gameObject);
+    }
 }
