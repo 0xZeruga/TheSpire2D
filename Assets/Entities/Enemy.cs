@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        GameObject.FindObjectOfType<UIManager>().SoulFragments += SoulValue;
+        GameObject.FindObjectOfType<Character>().SoulFragments += SoulValue;
         Destroy(gameObject);
     }
 }

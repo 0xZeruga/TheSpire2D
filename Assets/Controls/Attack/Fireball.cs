@@ -12,9 +12,12 @@ public class Fireball : MonoBehaviour
 
         private int pFired;
         private int pDestroyed;
-        private float lastShot = 0.0f;    
+        private float lastShot = 0.0f;
+        private int RoundsFired = 0;
 
-        public float targetTime = 0.2f;
+        public float targetTime = 0.1f;
+
+        
        
 
 
@@ -39,7 +42,6 @@ public class Fireball : MonoBehaviour
 
     }
 
-    //MAKE RELOAD WORK SOMEHOW
     public void Fire()
     {
         if (Input.GetMouseButton(0)) 
@@ -55,7 +57,7 @@ public class Fireball : MonoBehaviour
 
                     ProjectileRB.velocity = transform.TransformDirection(new Vector3(0, 180, speed));
                     lastShot = Time.time;
-                 
+                RoundsFired++;
                  
                 }         
         }

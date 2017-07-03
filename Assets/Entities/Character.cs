@@ -33,6 +33,29 @@ public class Character : MonoBehaviour
     private float m_Mana;
     private float ManaRegen;
     public int MagicDMG;
+    public int SoulFragments;
+
+    private int m_Level;
+    private int m_Experience;
+    private int m_Gold;
+
+    public int Level
+    {
+        get { return m_Level; }
+        set { m_Level = value; }
+    }
+
+    public int Experience
+    {
+        get { return m_Experience; }
+        set { m_Experience = value; }
+    }
+
+    public int Gold
+    {
+        get { return m_Gold; }
+        set { m_Gold = value; }
+    }
 
     public float Health
     {
@@ -77,16 +100,12 @@ public class Character : MonoBehaviour
         m_Health = 100;
         m_Stamina = 75;
         m_Mana = 50;
-        Health -= 1f;
-        Stamina += 2f;
 
-
-        Debug.Log("Health" + Health + " / " + MAXHEALTH);
-
-        Debug.Log("Stamina" + Stamina + " / " + MAXSTAMINA);
-
-        Debug.Log("Mana" + Mana + " / " + MAXMANA);
-
+        m_Level = 1;
+        m_Experience = 0;
+        m_Gold = 0;
+        
+        SoulFragments = 100;
 
     }
     public void Update()
@@ -94,8 +113,12 @@ public class Character : MonoBehaviour
         CheckDeath();
         SwapAttack(m_Proj, m_Spin);
         CalcAtts();
-       
-       
+
+
+        //Test Statsshift
+        Health -= 1f;
+        Stamina += 2f;
+
     }
     public void NewEnemy()
     {
