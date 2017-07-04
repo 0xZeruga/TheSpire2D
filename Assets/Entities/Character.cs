@@ -14,7 +14,8 @@ public class Character : MonoBehaviour
     private Projectile m_Proj;
     private Spin m_Spin;
     public Enemy m_Enemy;
-
+    
+    
     //Main Attributes
     public int Strength;
     public int Speed;
@@ -180,11 +181,26 @@ public class Character : MonoBehaviour
         }
 
     }
-public void CheckDeath()
+
+    public void CheckDeath()
     {
         if(Health <= 0)
         {
             //PlayerDie and Respawn at start.
+        }
+    }
+
+    //CheckColliders
+    public void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.name == "SoulFragment")
+        {
+            Gold += 10;
+        }
+        else if(col.gameObject.name == "Enemy")
+        {
+            Health -= 1;
+            //Add Pushback to player
         }
     }
 }

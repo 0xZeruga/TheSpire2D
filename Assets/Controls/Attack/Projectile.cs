@@ -20,7 +20,9 @@ public class Projectile : Attack {
 
     void DoProjectileHit()
     {
-        gameObject.GetComponent<Enemy>().TakeDmg(Damage);
-        Destroy(gameObject);
+        //gameObject.GetComponent<Enemy>().TakeDmg(Damage);
+        //Destroy(gameObject);
     }
+
+
 }

@@ -13,27 +13,6 @@ public class Attack : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        //var rot = transform.rotation;
-        //var pos = transform.position;
-
-        //if(Input.GetMouseButton(0))
-        //{
-        //    new Projectile();
-        //}
-
-        //var stance = Character.Stance.MELEE;
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    new Spin();
-        //}
-        //else if (Input.GetMouseButtonDown(0))
-        //{
-        //    new Projectile();
-        //}
-        //else if (Input.GetMouseButtonDown(2))
-        //{
-
-        //}
     }
 	
 	// Update is called once per frame
