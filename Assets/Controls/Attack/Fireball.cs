@@ -33,7 +33,7 @@ public class Fireball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Fire();
+        //Fire();
         //CheckTimer();
     
 
@@ -42,25 +42,18 @@ public class Fireball : MonoBehaviour
     //MAKE RELOAD WORK SOMEHOW
     public void Fire()
     {
-        if (Input.GetMouseButton(0)) 
+        if (Time.time > targetTime + lastShot)
         {
-                
-             
-                if (Time.time > targetTime + lastShot)
-                {
-                    ProjectileRB = Instantiate(ProjectileRB,
-                                                                    this.transform.position,
-                                                                    this.transform.rotation)
-                         as Rigidbody;
+            ProjectileRB = Instantiate(ProjectileRB,
+                                                            this.transform.position,
+                                                            this.transform.rotation)
+                    as Rigidbody;
 
-                    ProjectileRB.velocity = transform.TransformDirection(new Vector3(0, 180, speed));
-                    lastShot = Time.time;
+            ProjectileRB.velocity = transform.TransformDirection(new Vector3(0, 180, speed));
+            lastShot = Time.time;
                  
                  
-                }         
-        }
-
-       
+        }         
     }
 
     void OnBecameInvisible()
