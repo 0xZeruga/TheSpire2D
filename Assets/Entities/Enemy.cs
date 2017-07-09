@@ -35,14 +35,16 @@ public class Enemy : MonoBehaviour
 
     public void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "Player")
+        if (col.gameObject.name == "Fireball")
         {
             Destroy(gameObject);
+            Debug.Log("FireballCollision");
         }
-        else if (col.gameObject.name == "Fireball")
+        else if (col.gameObject.name == "Player")
         {
             //TakeDmg(20f);
             Destroy(gameObject);
+            Debug.Log("PlayerCollision");
         }
     }
 

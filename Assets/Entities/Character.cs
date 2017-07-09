@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
     private Attack m_ChosenAttack;
     //private Movement m_PlayerMovement;
     public TimeManager m_Time;
-    private Projectile m_Proj;
+    private Fire m_Proj;
     private Spin m_Spin;
     public Enemy m_Enemy;
     
@@ -137,7 +137,7 @@ public class Character : MonoBehaviour
 
     //Swap between Range and Melee Attack with middle mouse button.
 
-    public Attack SwapAttack(Projectile p, Spin s)
+    public Attack SwapAttack(Fire p, Spin s)
     {
         m_Proj = p;
         m_Spin = s;

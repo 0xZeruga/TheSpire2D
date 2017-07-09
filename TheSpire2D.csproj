@@ -84,7 +84,7 @@
     <Compile Include="Assets\CameraControl.cs" />
     <Compile Include="Assets\Controls\Attack\Attack.cs" />
     <Compile Include="Assets\Controls\Attack\Fireball.cs" />
-    <Compile Include="Assets\Controls\Attack\Projectile.cs" />
+    <Compile Include="Assets\Controls\Attack\Fire.cs" />
     <Compile Include="Assets\Controls\Attack\Spin.cs" />
     <Compile Include="Assets\Controls\Move.cs" />
     <Compile Include="Assets\Controls\Movement.cs" />
