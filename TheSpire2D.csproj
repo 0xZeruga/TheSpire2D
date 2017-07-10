@@ -81,8 +81,8 @@
     <Compile Include="Assets\AIFollow.cs" />
     <Compile Include="Assets\CameraControl.cs" />
     <Compile Include="Assets\Controls\Attack\Attack.cs" />
-    <Compile Include="Assets\Controls\Attack\Fireball.cs" />
     <Compile Include="Assets\Controls\Attack\Fire.cs" />
+    <Compile Include="Assets\Controls\Attack\Fireball.cs" />
     <Compile Include="Assets\Controls\Attack\Spin.cs" />
     <Compile Include="Assets\Controls\Move.cs" />
     <Compile Include="Assets\Controls\Movement.cs" />
@@ -116,6 +116,10 @@
     <Compile Include="Assets\Tools\UnitConverter.cs" />
     <Compile Include="Assets\Tools\XMLParser.cs" />
     <Compile Include="Assets\UIManager.cs" />
+    <Compile Include="Assets\World\Procedural Generation\BoardCreator.cs" />
+    <Compile Include="Assets\World\Procedural Generation\Corridor.cs" />
+    <Compile Include="Assets\World\Procedural Generation\IntRange.cs" />
+    <Compile Include="Assets\World\Procedural Generation\Room.cs" />
     <Compile Include="Assets\World\WorldInteraction.cs" />
   </ItemGroup>
   <ItemGroup>

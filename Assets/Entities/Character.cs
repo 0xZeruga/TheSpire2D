@@ -206,9 +206,9 @@ public class Character : MonoBehaviour
 
     public void ShootAt(Enemy e)
     {
-        GameObject Fireball = (GameObject)Instantiate(FireballPrefab, this.transform.position, this.transform.rotation);
-        Fireball f = Fireball.GetComponent<Fireball>();
-        f.target = e.transform;
+        //GameObject Fireball = (GameObject)Instantiate(FireballPrefab, this.transform.position, this.transform.rotation);
+        //Fireball f = Fireball.GetComponent<Fireball>();
+        //f.target = e.transform;
     }
 }
 
