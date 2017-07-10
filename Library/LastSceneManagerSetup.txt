@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/TheSpire2DArena.unity
+- path: Assets/TheSpire2DTestProcedural.unity
   isLoaded: 1
   isActive: 1
