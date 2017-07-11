@@ -115,6 +115,10 @@
     <Compile Include="Assets\Tools\TimeManager.cs" />
     <Compile Include="Assets\Tools\UnitConverter.cs" />
     <Compile Include="Assets\Tools\XMLParser.cs" />
+    <Compile Include="Assets\UI\HealthBar.cs" />
+    <Compile Include="Assets\UI\ManaBar.cs" />
+    <Compile Include="Assets\UI\SoulThirst.cs" />
+    <Compile Include="Assets\UI\StaminaBar.cs" />
     <Compile Include="Assets\UIManager.cs" />
     <Compile Include="Assets\World\Procedural Generation\BoardCreator.cs" />
     <Compile Include="Assets\World\Procedural Generation\Corridor.cs" />

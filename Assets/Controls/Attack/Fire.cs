@@ -35,7 +35,7 @@ public class Fire : Attack {
 
             if (Time.time > targetTime + lastShot)
             {
-                Instantiate(Fireball);
+               // Instantiate(Fireball);
                 lastShot = Time.time;
                 RoundsFired++;
 

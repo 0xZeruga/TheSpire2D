@@ -14,8 +14,8 @@ public class Character : MonoBehaviour
     private Fire m_Proj;
     private Spin m_Spin;
     public Enemy m_Enemy;
-    
-    
+
+
     //Main Attributes
     public int Strength;
     public int Speed;
@@ -74,9 +74,15 @@ public class Character : MonoBehaviour
         set { m_Mana = value; }
     }
 
-    private const float MAXHEALTH = 100;
-    private const float MAXSTAMINA = 75;
-    private const float MAXMANA = 50;
+
+    public int MAXHEALTH { get; set; }
+
+    public int MAXSTAMINA { get; set; }
+
+    public int MAXMANA { get; set; }
+
+    public int MAXSOULTHIRST { get; set; }
+
 
     public string CharacterClassDescription = "";
 
